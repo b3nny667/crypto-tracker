@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-coins"></i> Crypto Tracker</h1>
+            <div class="refresh" id="refresh">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </div>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search cryptocurrencies...">
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="top10">Top 10</button>
+            <button class="filter-btn" data-filter="gainers">Gainers</button>
+            <button class="filter-btn" data-filter="losers">Losers</button>
+        </div>
+        
+        <div class="crypto-list">
+            <div class="list-header">
+                <div class="rank">#</div>
+                <div class="name">Coin</div>
+                <div class="price">Price</div>
+                <div class="change">24h</div>
+                <div class="market-cap">Market Cap</div>
+            </div>
+            <div id="crypto-data" class="list-body">
+                <!-- Crypto data will be loaded here -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Loading cryptocurrency data...
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Market Cap</h3>
+                <p id="total-market-cap">-</p>
+            </div>
+            <div class="stat-card">
+                <h3>24h Volume</h3>
+                <p id="total-volume">-</p>
+            </div>
+            <div class="stat-card">
+                <h3>Active Cryptos</h3>
+                <p id="active-cryptos">-</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
